@@ -7,7 +7,6 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Stack(
         children: [
         Column(
@@ -166,30 +165,35 @@ class ProfilePage extends StatelessWidget {
                   ],),
                 ),
                 const SizedBox(height: 20),
-                Container(
-                  width: 353,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      color: const Color(0XFF245B60),
-                    ),
-                  ),
-                  child:
-                  Row(children: [
-                    SizedBox(width: 45),
-                    Container(
-                      width: 28,
-                      height: 24,
-                      child: Image(image: AssetImage('assets/images/iconsprofile/config.png')
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushReplacementNamed('/config');
+                  },
+                  child: Container(
+                    width: 353,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: const Color(0XFF245B60),
                       ),
                     ),
-                    SizedBox(width: 21),
-                    Text('Configurações', style: TextStyle(
-                      fontFamily: 'DMSans', fontSize: 20,
-                      color: Color(0XFF245B60),
-                    ),)
-                  ],),
+                    child:
+                    Row(children: [
+                      SizedBox(width: 45),
+                      Container(
+                        width: 28,
+                        height: 24,
+                        child: Image(image: AssetImage('assets/images/iconsprofile/config.png')
+                        ),
+                      ),
+                      SizedBox(width: 21),
+                      Text('Configurações', style: TextStyle(
+                        fontFamily: 'DMSans', fontSize: 20,
+                        color: Color(0XFF245B60),
+                      ),)
+                    ],),
+                  ),
                 ),
                 const SizedBox(height: 20),
                 Container(

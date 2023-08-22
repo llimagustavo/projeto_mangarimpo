@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mangarimpo/src/chat/chatsebogaleria.dart';
 import 'package:mangarimpo/src/home/home_page.dart';
 import 'package:mangarimpo/src/chat/chatpage.dart';
 import 'package:mangarimpo/src/profilesebos/arquivocultural.dart';
@@ -7,7 +8,10 @@ import 'package:mangarimpo/src/profilesebos/papirobranco.dart';
 import 'package:mangarimpo/src/profilesebos/sebariacultural.dart';
 import 'package:mangarimpo/src/profilesebos/sebodagaleria.dart';
 import 'package:mangarimpo/src/profilesebos/sebodaperiferia.dart';
+import 'package:mangarimpo/src/profileuser/config/config.dart';
+import 'package:mangarimpo/src/profileuser/config/theme/appcontroller.dart';
 import 'package:mangarimpo/src/profileuser/profilepage.dart';
+import 'package:mangarimpo/src/searchbar/result.dart';
 import 'package:mangarimpo/src/searchbar/search.dart';
 import 'package:mangarimpo/src/splash/splashpage.dart';
 
@@ -21,10 +25,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return AnimatedBuilder(
+      animation: AppController.instance, 
+      builder: (context, child) {
+        return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: true,
+        brightness: AppController.instance.isDartTheme 
+        ? Brightness.dark 
+        : Brightness.light,
       ),
       initialRoute: '/splash',
       routes: {
@@ -39,10 +48,12 @@ class MyApp extends StatelessWidget {
         '/perfilperiferia': (context) => const PerfilPeriferia(),
         '/perfilcultural': (context) => const PerfilArquivoCultural(),
         '/perfilsebaria': (context) => const PerfilSebariaCultural(),
-        
-        
-      },
-    );
+        '/result': (context) => const ResultPage(),
+        '/config': (context) => const ConfigPage(),
+        '/chatgaleria': (context) => const ChatGaleria(),
+        },
+      );
+    });
   }
 }
 

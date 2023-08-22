@@ -5,6 +5,9 @@ class BottomProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (Brightness.dark == true) {
+      
+    }
     return Stack(
       children: [
         Positioned(

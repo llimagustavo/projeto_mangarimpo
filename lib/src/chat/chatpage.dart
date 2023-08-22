@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mangarimpo/src/bottomnavigation/bottom.chat.dart';
-import 'package:mangarimpo/src/home/home_page.dart';
+
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});
@@ -10,11 +10,7 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
-  int index = 0;
-  final screens = [
-    const ChatPage(),
-    const HomePage(),
-  ];
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +19,6 @@ class _ChatPageState extends State<ChatPage> {
         Scaffold(
           appBar: PreferredSize(preferredSize: const Size(0, 60),
             child: AppBar(
-              backgroundColor: Colors.white.withOpacity(0.9),
               title: const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Text('Chat', style: TextStyle(
@@ -95,68 +90,73 @@ class _ChatPageState extends State<ChatPage> {
                 ),),
                 
                 const SizedBox(height: 30),
-                Container(
-                  width: 350,
-                  height: 72,
-                  decoration: BoxDecoration(
-                    color: const Color(0XFF245B60),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Stack(
-                    children: [
-                      Row(children: [
-                         const SizedBox(width: 14),
-                        Container(
-                          width: 53,
-                          height: 53,
-                          decoration: BoxDecoration(
-                            image: const DecorationImage(image: AssetImage('assets/images/perfilsebo/galeria.png')),
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: const Color(0XFFBB2946),
-                              width: 3,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushReplacementNamed('/chatgaleria');
+                  },
+                  child: Container(
+                    width: 350,
+                    height: 72,
+                    decoration: BoxDecoration(
+                      color: const Color(0XFF245B60),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Stack(
+                      children: [
+                        Row(children: [
+                           const SizedBox(width: 14),
+                          Container(
+                            width: 53,
+                            height: 53,
+                            decoration: BoxDecoration(
+                              image: const DecorationImage(image: AssetImage('assets/images/perfilsebo/galeria.png')),
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: const Color(0XFFBB2946),
+                                width: 3,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 12),
+                              Text('Sebo da Galeria', style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'DMSans-Bold',
+                                fontSize: 16,
+                              ),),
+                              Text('Como posso te ajudar?', style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'DMSans',
+                                fontSize: 14,
+                              ),),
+                            ],
+                          ),
+                        ],),
+                        const Positioned(
+                          right: 15, top: 18,
+                              child: Text('18h45', style: TextStyle(
+                                fontFamily: 'DMSans', fontSize: 10,
+                                color: Colors.white,
+                            ),),
+                          ),
+                          Positioned( right: 22, top: 36,
+                            child: Container(
+                            width: 16, height: 16,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: const Center(child: Text('2', style: TextStyle(
+                              fontSize: 10, color: Color(0XFF245B60),
+                            ),),
                             ),
                           ),
                         ),
-                        const SizedBox(width: 12),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(height: 12),
-                            Text('Sebo da Galeria', style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'DMSans-Bold',
-                              fontSize: 16,
-                            ),),
-                            Text('Como posso te ajudar?', style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'DMSans',
-                              fontSize: 14,
-                            ),),
-                          ],
-                        ),
-                      ],),
-                      const Positioned(
-                        right: 15, top: 18,
-                            child: Text('18h45', style: TextStyle(
-                              fontFamily: 'DMSans', fontSize: 10,
-                              color: Colors.white,
-                          ),),
-                        ),
-                        Positioned( right: 22, top: 36,
-                          child: Container(
-                          width: 16, height: 16,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(100),
-                          ),
-                          child: const Center(child: Text('2', style: TextStyle(
-                            fontSize: 10, color: Color(0XFF245B60),
-                          ),),
-                          ),
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 25),

@@ -8,10 +8,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(1.0),
       appBar: PreferredSize(preferredSize: const Size(0, 65),
         child: AppBar(
-          backgroundColor: Colors.white.withOpacity(1.0),
           title: Image.asset('assets/images/logo.png', width: 241, height: 50),
           centerTitle: true,        
          ),
@@ -29,7 +27,7 @@ class HomePage extends StatelessWidget {
                       },
                       child: Container(
                         width: 266,
-                        height: 30,
+                        height: 35,
                         decoration: BoxDecoration(
                           border: Border.all(
                             width: 2,

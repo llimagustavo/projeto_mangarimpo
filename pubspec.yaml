@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
+  page_transition: ^2.0.9
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -44,7 +46,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/icone.png"
+  image_path: "assets/images/splashmini.png"
   
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -72,6 +74,7 @@ flutter:
      - assets/images/map.png
      - assets/images/icons/contacts.png
      - assets/images/icons/chat.png
+     - assets/images/icons/voltar.png
      - assets/images/iconsprofile/out.png
      - assets/images/iconsprofile/config.png
      - assets/images/iconsprofile/eye.png
@@ -104,6 +107,12 @@ flutter:
      - assets/images/perfilperiferia.jpg
      - assets/images/splash.png
      - assets/images/icone.png
+     - assets/images/crep1.png
+     - assets/images/crep2.png
+     - assets/images/crep3.png
+     - assets/images/night.png
+     - assets/images/3.png
+     - assets/images/confirm.png
 
      
      

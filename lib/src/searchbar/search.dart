@@ -11,6 +11,7 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   bool isOverlayVisible = false;
+  String result = '';
 
   void toggleOverlay() {
     setState(() {
@@ -69,12 +70,23 @@ class _SearchPageState extends State<SearchPage> {
                         ),
                         child: 
                           TextField(
+                            onChanged: (text) {
+                              result = text;
+                            },
                             decoration: InputDecoration(
                               hintText: 'Encontre o que procura', hintStyle: TextStyle(
-                                fontSize: 14,
+                                fontSize: 14, color: Color(0XFF6E6D69),
                               ),
                               border: InputBorder.none,
-                              suffixIcon: IconButton(onPressed: () {}, 
+                              suffixIcon: IconButton(onPressed: () {
+                                if (result == 'Crepúsculo') {
+                                  Navigator.of(context).pushReplacementNamed('/result');
+                                } else {
+                                  (result == 'Crepúsculo '); {
+                                    Navigator.of(context).pushReplacementNamed('/result');
+                                  }
+                                }
+                              }, 
                               icon: Icon(Icons.search_rounded,
                               color: Color(0XFFBB2946),
                               size: 30,
