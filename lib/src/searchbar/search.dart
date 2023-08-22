@@ -79,12 +79,14 @@ class _SearchPageState extends State<SearchPage> {
                               ),
                               border: InputBorder.none,
                               suffixIcon: IconButton(onPressed: () {
-                                if (result == 'Crepúsculo') {
+                                if (result.contains('Crepúsculo')) {
                                   Navigator.of(context).pushReplacementNamed('/result');
                                 } else {
-                                  (result == 'Crepúsculo '); {
+                                  (result.contains('Crepúsculo ')); {
                                     Navigator.of(context).pushReplacementNamed('/result');
                                   }
+                                } if (result.isEmpty) {
+                                  Navigator.of(context).pushReplacementNamed('/search');
                                 }
                               }, 
                               icon: Icon(Icons.search_rounded,
