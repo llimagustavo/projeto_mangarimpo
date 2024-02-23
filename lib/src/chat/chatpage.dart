@@ -10,17 +10,17 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
- 
+
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Scaffold(
-          appBar: PreferredSize(preferredSize: const Size(0, 60),
+          appBar: PreferredSize(preferredSize: const Size(0, 50),
             child: AppBar(
               title: const Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: EdgeInsets.only(left: 20, top: 20),
                 child: Text('Chat', style: TextStyle(
                   color: Color(0XFF245B60),
                   fontSize: 26,
@@ -28,55 +28,7 @@ class _ChatPageState extends State<ChatPage> {
                     ),
                   ),
               ),
-              actions: [
-                GestureDetector(
-                  onTap: () {
-                    //FUNÇÃO DE PESQUISA
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 63),
-                    child: Container(
-                      width: 225,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 2,
-                          color: const Color(0XFF245B60),
-                        ),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.only(left: 16),
-                            child: Text(
-                              'Pesquisar suas conversas',
-                              style: TextStyle(
-                                color: Color(0XFF6E6D69),
-                                fontFamily: 'DM Sans',
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 11),
-                            child: Container(
-                              width: 14,
-                              height: 14,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('assets/images/busca.png'),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+              actions: [],
             ),
           ),
           body: Padding(

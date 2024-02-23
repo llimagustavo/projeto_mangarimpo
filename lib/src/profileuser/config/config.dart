@@ -15,14 +15,14 @@ class _ConfigPageState extends State<ConfigPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 80),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 50),
         child: Column( crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushReplacementNamed('/home');
+                    Navigator.of(context).pushReplacementNamed('/profile');
                   },
                   child: Container(
                     width: 25,
@@ -53,6 +53,7 @@ class _ConfigPageState extends State<ConfigPage> {
             Text('Acessibilidade', style: TextStyle(
               color: Color(0XFF6E6D69),
             ),),
+            SizedBox(height: 10),
             Container(
               width: 353,
               height: 44,
@@ -68,11 +69,11 @@ class _ConfigPageState extends State<ConfigPage> {
                   Container( width: 28, height: 28,
                     child: Image.asset('assets/images/night.png')),
                   SizedBox(width: 15),
-                  Text('Ativar modo noturno', style: TextStyle(
+                  Text('Modo noturno', style: TextStyle(
                     fontFamily: 'DMSans-Bold', fontSize: 18,
                     color: Color(0XFF245B60),
                   ),),
-                  SizedBox(width: 15),
+                  SizedBox(width: 80),
                   Switch(
                     activeColor: Color(0XFF245B60),
                     value: AppController.instance.isDartTheme, 
