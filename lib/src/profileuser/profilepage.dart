@@ -12,7 +12,7 @@ class ProfilePage extends StatelessWidget {
         Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 67, top: 80),
+              padding: const EdgeInsets.only(left: 60, top: 80),
               child: Row(children: [
                 Container(
                   width: 104,

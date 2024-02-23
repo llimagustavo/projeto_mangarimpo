@@ -18,7 +18,7 @@ class BottomNavigation extends StatelessWidget {
             ),
           ),
             Positioned(
-              bottom: 10, left: 50,
+              bottom: 10, left: 40,
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).pushReplacementNamed('/chat');
@@ -39,7 +39,7 @@ class BottomNavigation extends StatelessWidget {
             ),
           ),
             Positioned(
-              bottom: 10, left: 167,
+              bottom: 10, left: 157,
                 child: Container(
                   width: 76,
                   height: 59,
@@ -51,7 +51,7 @@ class BottomNavigation extends StatelessWidget {
               ),
           ),
             Positioned(
-              bottom: 10, left: 282,
+              bottom: 10, left: 272,
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).pushReplacementNamed('/profile');
