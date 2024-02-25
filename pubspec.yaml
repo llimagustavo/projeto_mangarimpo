@@ -41,12 +41,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons:
+  flutter_launcher_icons: "^0.13.1"
 
-flutter_icons:
-  android: true
+flutter_launcher_icons:
+  android: "launcher_icon"
   ios: true
-  image_path: "assets/images/splashmini.png"
+  image_path: "assets/images/icone.png"
   
 
   # The "flutter_lints" package below contains a set of recommended lints to
