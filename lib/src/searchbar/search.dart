@@ -79,15 +79,18 @@ class _SearchPageState extends State<SearchPage> {
                               ),
                               border: InputBorder.none,
                               suffixIcon: IconButton(onPressed: () {
+
                                 if (result.contains('Crepúsculo')) {
                                   Navigator.of(context).pushReplacementNamed('/result');
-                                } else {
-                                  (result.contains('Crepúsculo ')); {
+                                } 
+                                else if (result.contains('Crepúsculo ')) {
                                     Navigator.of(context).pushReplacementNamed('/result');
                                   }
-                                } if (result.isEmpty) {
+                                else if (result.isEmpty) {
                                   Navigator.of(context).pushReplacementNamed('/search');
                                 }
+                              
+                                
                               }, 
                               icon: Icon(Icons.search_rounded,
                               color: Color(0XFFBB2946),
