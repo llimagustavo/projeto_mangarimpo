@@ -1,6 +1,9 @@
 # Mangarimpo
 
-O Mangarimpo é um aplicativo em desenvolvimento, criado exclusivamente para fins de treinamento em Flutter. O objetivo principal é facilitar a busca por sebos na região de Belém e Ananindeua. Através desta plataforma, os usuários podem encontrar sebos, explorar suas ofertas e se comunicar diretamente para compra e venda de livros, CDs, DVDs e outros itens relacionados. Este projeto visa proporcionar uma oportunidade prática de desenvolvimento de telas em Flutter.
+O Mangarimpo é um aplicativo em desenvolvimento, criado exclusivamente para fins de treinamento em Flutter. 
+O objetivo principal é facilitar a busca por sebos na região de Belém e Ananindeua. Os usuários podem encontrar sebos e se comunicar diretamente para compra e venda de livros, CDs, DVDs e outros itens relacionados.
+  
+- **Este projeto visa proporcionar uma oportunidade prática de desenvolvimento de telas em Flutter.**
 
 <!-- ## Funcionalidades
 
