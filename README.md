@@ -2,7 +2,7 @@
 
 O Mangarimpo é um aplicativo ainda em desenvolvimento em Flutter que tem como objetivo facilitar a busca por sebos na região de Belém e Ananindeua. Ele oferece uma plataforma para clientes encontrarem sebos, explorar suas ofertas e se comunicar diretamente para compra e venda de livros, CDs, DVDs e outros itens relacionados.
 
-## Funcionalidades
+<!-- ## Funcionalidades
 
 - Lista de Sebos: Explore uma lista completa de sebos disponíveis na região, com informações detalhadas sobre cada um.
 
